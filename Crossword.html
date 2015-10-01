@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <head>
 	<title>Crossword Puzzle</title>
-
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 			#puzzle {
 					width: 520px;
@@ -37,8 +37,8 @@
 				position: absolute;
 				margin-left: -8px;
 				text-align: center;
-				opacity: .5;
-				color: purple;
+				opacity: .75;
+				color: #501f84;
 			}
 			/* Below is for double digit numbers*/
 			#textBoxnum2 {
@@ -50,8 +50,8 @@
 				position: absolute;
 				margin-left: -15px;
 				text-align: center;
-				opacity: .5;
-				color: purple;
+				opacity: .75;
+				color: #501f84;
 			}
 			/*Below is for normal text boxes*/
 			#textBox1 {
@@ -62,13 +62,53 @@
 				border: none;
 				position: absolute;
 				text-align: center;
-				opacity: .5;
-				color: purple;
+				opacity: .75;
+				color: #501f84;
 			}
+
 			.hint {
 				display: none;
-				color: blue;
-			};
+				color: #501f84;
+				font-weight: 700;
+			}
+
+			div#button {
+				background-color: #501f84;
+				font-family: 'Ubuntu', sans-serif;
+				color: white;
+				height: 35px;
+				width: 200px;
+				border-radius: 15px;
+				font-size: 1.25em;
+				margin-top: 20px;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			#button:hover {
+				background-color: #613590;
+			}
+
+			#button:active {
+				background-color: #401869;
+			}
+
+			p {
+				font-family: 'Ubuntu', sans-serif;
+			}
+
+			.clues {
+				display: inline-block;
+				width: 150px;
+			}
+
+			#cluesAcross {
+				float: right;
+			}
+
+			;
 
 	</style>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -88,7 +128,7 @@
 	<div id="puzzle">
 		<div class="row">
 			<div class="b"></div>
-			<div class="w">1
+			<div class="w"><span class="boxNumber">1</span>
 				<input maxlength="1" maxlength="1" id="textBoxnum" type="text" value="" />
 			</div>
 			<div class="b"></div>
@@ -317,7 +357,27 @@
 			<div class="b"></div>
 		</div>
 	</div>
-	<button id="button">Show/Hide Answers</button>
-	<p>Down</p>
-	<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+
+<!--END OF CROSSWORD // REST OF BODY-->
+
+	<center><div id="button">Show/Hide Answers</div></center>
+
+	<div id="cluesDown">
+		<p><u>Down</u></p>
+		
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>2. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>3. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>4. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>5. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+	</div>
+
+	<div id="cluesAcross">
+		<p><u>Across</u></p>
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+		<p>1. Shell stopped drilling here  <span class="hint">Alaska</span></p>
+	</div>
 </body>
